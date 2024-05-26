@@ -11,7 +11,16 @@ const BuyerPage = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        // const res = await api.get('/properties');
+        const requestOptions = {
+          method: "GET",
+          redirect: "follow",
+        };
+
+        fetch("http://localhost:4000/", requestOptions)
+          .then((response) => response.text())
+          .then((result) => console.log(result))
+          .catch((error) => console.error(error));
+
         setProperties([]);
         setLoading(false);
       } catch (err) {
