@@ -23,42 +23,41 @@ function Form({ onFormSubmit }) {
             <h1 className="main">{logIn.title ? "LOG IN" : "SIGN UP"}</h1>
           </div>
           <hr />
-          <div className="firstName box">
-            <label>First Name</label>
-            <input
-              type="text"
-              placeholder="Enter First Name"
-              value={inputValue.firstName}
-              onChange={(e) =>
-                setInputValue({
-                  firstName: e.target.value,
-                  lastName: inputValue.lastName,
-                  phone: inputValue.phone,
-                  email: inputValue.email,
-                  password: inputValue.password,
-                })
-              }
-              required
-            />
-          </div>
-          <div className="name box">
-            <label>Last Name</label>
-            <input
-              type="text"
-              placeholder="Enter Last Name"
-              value={inputValue.lastName}
-              onChange={(e) =>
-                setInputValue({
-                  firstName: inputValue.firstName,
-                  lastName: e.target.value,
-                  phone: inputValue.phone,
-                  email: inputValue.email,
-                  password: inputValue.password,
-                })
-              }
-              required
-            />
-          </div>
+          {!logIn.title && (
+            <div>
+              <div className="firstName box">
+                <label>First Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter First Name"
+                  value={inputValue.firstName}
+                  onChange={(e) =>
+                    setInputValue({
+                      ...inputValue,
+                      firstName: e.target.value,
+                    })
+                  }
+                  required
+                />
+              </div>
+              <div className="lastName box">
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter Last Name"
+                  value={inputValue.lastName}
+                  onChange={(e) =>
+                    setInputValue({
+                      ...inputValue,
+                      lastName: e.target.value,
+                    })
+                  }
+                  required
+                />
+              </div>
+            </div>
+          )}
+
           <div className="name box">
             <label>Phone Number</label>
             <input
@@ -77,7 +76,7 @@ function Form({ onFormSubmit }) {
               required
             />
           </div>
-          
+          <div></div>
           <div className=" box">
             <label htmlFor="email">Email</label>
             <input
