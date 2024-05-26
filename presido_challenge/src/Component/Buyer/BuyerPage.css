@@ -1,27 +1,68 @@
 /* src/components/BuyerPage.css */
 .buyer-page {
-    padding: 20px;
-  }
-  
-  .properties-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .property-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .property-card h2 {
-    margin-top: 0;
-  }
-  
-  .property-card p {
-    margin: 4px 0;
-  }
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.properties-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.property-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 300px;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.property-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.property-card-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.property-rent {
+  font-size: 1.1em;
+  color: #28a745;
+}
+
+.property-images img {
+  width: 100%;
+  height: auto;
+}
+
+.property-details {
+  padding: 15px;
+}
+
+.property-details p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.property-details strong {
+  color: #333;
+}
+
+.property-card img {
+  border-bottom: 1px solid #ddd;
+}
