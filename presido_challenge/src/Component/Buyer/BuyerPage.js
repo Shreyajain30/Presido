@@ -1,7 +1,7 @@
 // src/components/BuyerPage.js
-import React, { useEffect, useState } from 'react';
-import api from '../api';
-import './BuyerPage.css';
+import React, { useEffect, useState } from "react";
+
+import "./BuyerPage.css";
 
 const BuyerPage = () => {
   const [properties, setProperties] = useState([]);
@@ -11,8 +11,8 @@ const BuyerPage = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const res = await api.get('/properties');
-        setProperties(res.data);
+        // const res = await api.get('/properties');
+        setProperties([]);
         setLoading(false);
       } catch (err) {
         setError(err);

@@ -1,18 +1,23 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import BuyerPage from "./Component/Buyer/BuyerPage";
 import Form from "./Component/form/Form";
-import './App.css';
+import "./App.css";
 
 const App = () => (
   <Router>
     <div className="App">
-      <Switch>
-        <Route exact path="/" component={BuyerPage} />
-        <Route path="/form" component={Form} />
-        <Redirect to="/" />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<BuyerPage />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   </Router>
 );
