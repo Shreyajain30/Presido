@@ -1,8 +1,8 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import BuyerPage from './components/BuyerPage';
-import Form from './components/form/Form';
+import BuyerPage from "./Component/Buyer/BuyerPage";
+import Form from "./Component/form/Form";
 import './App.css';
 
 const App = () => (
