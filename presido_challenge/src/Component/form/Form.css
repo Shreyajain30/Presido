@@ -28,8 +28,8 @@ body {
 .form {
   backdrop-filter: blur(8px);
   background-color: rgba(47, 44, 44, 0.5);
-  height: 80%;
-  width: 50%;
+  height: 90%;
+  width: 70%;
   border: 1px solid grey;
   box-shadow: 1px 1px 5px 1px rgb(48, 48, 48);
   border-radius: 0.7%;
@@ -45,7 +45,7 @@ body {
   align-items: center;
 }
 .header {
-  height: 30%;
+  height: 20%;
   margin-bottom: 1rem;
   background-image:  url(/public/header.jpeg);
   background-position: center;
@@ -59,13 +59,12 @@ body {
   font-size: 1rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+.firstName{
+  margin-top: 1rem;
+}
 hr {
   margin: 0 1rem;
   border: 1px solid rgb(170, 162, 162);
-}
-.email {
-  margin-top: 5%;
 }
 label {
   align-self: flex-start;
@@ -80,54 +79,18 @@ input {
   padding: 0.8rem 0.7rem;
   border-radius: 0.5rem;
   border: 1px solid grey;
+ 
 }
-/* #email{
-  margin-bottom: 1rem;
-} */
-.forget {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 1rem;
-  padding: 0 22%;
-}
-#forget {
-  margin-left: 0.4rem;
-  margin-bottom: 1rem;
-  white-space: nowrap;
-  font-size: 0.83rem;
-  color: rgb(191, 178, 178);
-}
-.forgetId {
-  align-self: flex-start;
-}
-#invalid_password {
-  text-align: left;
-  color:red;
-  margin-bottom: 1rem;
-  white-space: wrap;
-}
-#invalid_email {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: red;
-  align-self: flex-start;
-  margin-left: 15%;
-  white-space: wrap;
-}
-i {
-  color: rgb(71, 39, 82);
-  background-color: #f6eaec;
-  padding: 0.25rem;
-  border-radius: 50%;
-  border: 1px solid rgb(96, 58, 109);
-}
+
+
 .button_container {
   width: 30%;
+  height:2rem;
   display: flex;
-  flex-direction: row;
+ align-items: center;
   margin-top: 1rem;
-  justify-content: space-between;
+  justify-content: space-around;
+  color: white;
   background: linear-gradient(rgb(178, 96, 205), rgb(71, 39, 82));
   border-radius: 0.3rem;
   border: none;
@@ -136,12 +99,10 @@ i {
 .button_container:hover {
   background: linear-gradient(rgb(201, 110, 231), rgb(63, 34, 72));
 }
-.button_container:hover #button_icon {
-  color: rgb(84, 40, 97);
-  background-color: rgb(220, 211, 232);
-}
+
 .button {
   width: 80%;
+  height: 2rem;
   /* padding-top: 5%; */
   padding: 5% 0;
   display: flex;
