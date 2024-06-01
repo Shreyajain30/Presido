@@ -1,57 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@200;300&family=Montserrat:ital,wght@1,100&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+img {
+  /* margin-left: 5rem; */
+  /* background-image: url(/public/background-image.jpeg); */
+  width: 100%;
+  height: auto;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
-body {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(/public/bgImage.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-size: 1.3rem;
-  font-family: "IBM Plex Sans Hebrew", sans-serif;
-  color: rgb(97, 62, 109);
+.image {
+  width: 40%;
+  margin-left: 1rem;
 }
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-}
-.form {
-  backdrop-filter: blur(8px);
-  background-color: rgba(47, 44, 44, 0.5);
-  height: 90%;
+#form {
   width: 70%;
-  border: 1px solid grey;
-  box-shadow: 1px 1px 5px 1px rgb(48, 48, 48);
-  border-radius: 0.7%;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
 }
 
+.container {
+  padding-top: 7rem;
+  color: rgb(57, 57, 57);
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  overflow: scroll;
+}
+.box-container {
+  display: flex;
+  flex-direction: column;
+}
+h1,
+p {
+  margin-left: 1rem;
+}
 .box {
   padding: 0 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header {
-  height: 20%;
-  margin-bottom: 1rem;
-  background-image:  url(/public/header.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .title {
   width: 100%;
   text-align: center;
@@ -59,139 +50,64 @@ body {
   font-size: 1rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.firstName{
+.firstName {
   margin-top: 1rem;
 }
 hr {
-  margin: 0 1rem;
+  margin: 0 5rem;
   border: 1px solid rgb(170, 162, 162);
 }
 label {
   align-self: flex-start;
   margin-left: 15%;
-  color: white;
-  margin-bottom: 0.6rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
 }
-input {
-  margin-top: 0.2rem;
-  margin-bottom: 0.9rem;
-  width: 70%;
+.line-input {
+  align-self: self-start;
+  margin-left: 15%;
+  margin-top: 0.5rem;
+  width: 30rem;
   padding: 0.8rem 0.7rem;
-  border-radius: 0.5rem;
-  border: 1px solid grey;
- 
-}
-
-
-.button_container {
-  width: 30%;
-  height:2rem;
-  display: flex;
- align-items: center;
-  margin-top: 1rem;
-  justify-content: space-around;
-  color: white;
-  background: linear-gradient(rgb(178, 96, 205), rgb(71, 39, 82));
-  border-radius: 0.3rem;
   border: none;
+  outline: none;
+  border-bottom: 0.8px solid rgb(156, 156, 156);
+  transition: border-bottom 0.2s ease;
+}
+.line-input:focus {
+  border-bottom: 2px solid rgb(73, 125, 69);
+}
+.radio-button {
+  margin-right: 1rem;
+  outline: none;
+}
+.radio-button:checked {
+ border-bottom: 1px springgreen ;
+}
+.button-box {
+  margin-left: 12%;
+  align-items: start;
+}
+.button_container {
+  width: 40%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  background: linear-gradient(rgb(70, 120, 75), rgb(36, 76, 49));
+  border-radius: 0.9rem;
+  border: none;
+  font-size: 0.9rem;
   box-shadow: 1px 1px 4px 0.5px rgb(44, 44, 44);
 }
 .button_container:hover {
-  background: linear-gradient(rgb(201, 110, 231), rgb(63, 34, 72));
-}
-
-.button {
-  width: 80%;
-  height: 2rem;
-  /* padding-top: 5%; */
-  padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  color: white;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-#button_icon {
-  color: rgb(99, 58, 113);
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(99, 58, 113);
-  border-radius: 0.3rem;
-  align-self: stretch;
+  background: linear-gradient(rgb(91, 145, 100), rgb(34, 72, 44));
 }
 
 .user {
-  font-size: 1rem;
-  margin-top: 0.3rem;
+  align-items: start;
+  margin-left: 12%;
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
   padding-bottom: 0.3rem;
-  color: rgb(191, 178, 178);
-}
-
-@media screen and (max-width: 768px) {
-  .form {
-    width: 70%;
-    height: 60%;
-  }
-  .title {
-    font-size: 0.8rem;
-  }
-  label {
-    font-size: 0.8rem;
-  }
-
-  #forget {
-    white-space: nowrap;
-  }
-  .user,
-  #forget {
-    font-size: 0.7rem;
-  }
-  #invalid_password,
-  #invalid_email {
-    font-size: 0.9rem;
-  }
-  .button_container {
-    overflow: scroll;
-  }
-  .button_content {
-    font-size: 0.8rem;
-    padding: 0.3rem 0;
-    width: 100%;
-    margin: 10% 0;
-  }
-  #button_icon {
-    display: none;
-  }
-}
-@media screen and (max-width: 400px) {
-  .form {
-    width: 80%;
-    height: 50%;
-  }
-  .forget {
-    display: flex;
-    flex-direction: column;
-  }
-  #forget {
-    white-space: wrap;
-  }
-  .user,
-  .forgetId {
-    font-size: 0.5rem;
-    align-self: center;
-  }
-  #invalid_email {
-    font-size: 0.7rem;
-    color: rgb(83, 7, 7);
-  }
-  #invalid_password {
-    font-size: 0.7rem;
-    text-align: left;
-    color: rgb(83, 7, 7);
-    margin-bottom: 1rem;
-  }
-  .button_content {
-    font-size: 0.5rem;
-  }
 }

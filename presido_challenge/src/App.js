@@ -8,15 +8,18 @@ import {
 } from "react-router-dom";
 import BuyerPage from "./Component/Buyer/BuyerPage";
 import Form from "./Component/form/Form";
+import Seller from "./Component/Seller/Seller";
+import Navbar from "./Component/Navbar/Navbar";
 import "./App.css";
 
 const App = () => (
   <Router>
     <div className="App">
+      <Navbar/>
       <Routes>
-        <Route exact path="/" element={<BuyerPage />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route exact path="/buyer" element={<BuyerPage />} />
+        <Route path="/" element={<Form />} />
+        <Route path="/seller" element={<Seller/>}/>
       </Routes>
     </div>
   </Router>
