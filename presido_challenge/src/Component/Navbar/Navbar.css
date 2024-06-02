@@ -2,7 +2,7 @@
     display:flex;
     background-color: rgb(57, 57, 57);
     color:white;
-    height:10vh;
+    height:5rem;
     width:100vw;
     justify-content: space-between;
     padding:0 2rem;
@@ -19,4 +19,15 @@ ul{
 }
 li{
     padding: 1rem;
+}
+.logo-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.logo{
+width:60px;
+height:auto;
+margin-right:1rem;
 }
