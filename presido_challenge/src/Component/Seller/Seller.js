@@ -14,7 +14,6 @@ const Seller = () => {
     address: "",
   });
   const [isEditing, setIsEditing] = useState(false);
-  const [editId, setEditId] = useState(null);
 
   // useEffect(() => {
   //   const fetchProperties = async () => {
@@ -88,13 +87,7 @@ const Seller = () => {
     });
   };
 
-  const handleDelete = (id) => {
-    // Handle delete logic
-  };
-
-  const handleEdit = (id) => {
-    // Handle edit logic
-  };
+ 
 
   return (
     <div className="seller-container">
