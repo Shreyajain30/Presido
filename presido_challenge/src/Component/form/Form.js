@@ -1,6 +1,5 @@
 import { useState } from "react";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Form.css";
 function Form({ onFormSubmit }) {
   const [inputValue, setInputValue] = useState({ email: "", password: "" });
@@ -19,7 +18,7 @@ function Form({ onFormSubmit }) {
           <div className="image">
          <h1>
             Find Your Perfect Retreat</h1> <p>Rent Your Dream Home Today!</p>
-            <img src="/form-image.png"></img>
+            <img src="/form-image.png" alt="form"></img>
 
           </div>
         <form id="form" onSubmit={handleSubmit}>

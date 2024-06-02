@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Seller.css";
 
 const Seller = () => {
-  const [properties, setProperties] = useState([]);
+  
   const [propertyDetails, setPropertyDetails] = useState({
     area: "",
     bedrooms: "",
@@ -16,51 +16,51 @@ const Seller = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
 
-  useEffect(() => {
-    const fetchProperties = async () => {
-      try {
-        // Simulate fetching data with hardcoded properties
-        const sampleProperties = [
-          {
-            id: 1,
-            area: "Spacious 3 BHK Apartment",
-            bedrooms: 3,
-            bathrooms: 2,
-            hospitalsNearby: "Hospital A, Hospital B",
-            collegesNearby: "College X, College Y",
-            price: 75000,
-            address: "123, ABC Street, City",
-          },
-          {
-            id: 2,
-            area: "Luxury Villa with Pool",
-            bedrooms: 5,
-            bathrooms: 4,
-            hospitalsNearby: "Hospital C, Hospital D",
-            collegesNearby: "College Z, College W",
-            price: 150000,
-            address: "456, XYZ Street, City",
-          },
-          {
-            id: 3,
-            area: "Cozy 2 BHK Apartment",
-            bedrooms: 2,
-            bathrooms: 1,
-            hospitalsNearby: "Hospital E, Hospital F",
-            collegesNearby: "College M, College N",
-            price: 50000,
-            address: "789, PQR Street, City",
-          },
-        ];
+  // useEffect(() => {
+  //   const fetchProperties = async () => {
+  //     try {
+  //       // Simulate fetching data with hardcoded properties
+  //       const sampleProperties = [
+  //         {
+  //           id: 1,
+  //           area: "Spacious 3 BHK Apartment",
+  //           bedrooms: 3,
+  //           bathrooms: 2,
+  //           hospitalsNearby: "Hospital A, Hospital B",
+  //           collegesNearby: "College X, College Y",
+  //           price: 75000,
+  //           address: "123, ABC Street, City",
+  //         },
+  //         {
+  //           id: 2,
+  //           area: "Luxury Villa with Pool",
+  //           bedrooms: 5,
+  //           bathrooms: 4,
+  //           hospitalsNearby: "Hospital C, Hospital D",
+  //           collegesNearby: "College Z, College W",
+  //           price: 150000,
+  //           address: "456, XYZ Street, City",
+  //         },
+  //         {
+  //           id: 3,
+  //           area: "Cozy 2 BHK Apartment",
+  //           bedrooms: 2,
+  //           bathrooms: 1,
+  //           hospitalsNearby: "Hospital E, Hospital F",
+  //           collegesNearby: "College M, College N",
+  //           price: 50000,
+  //           address: "789, PQR Street, City",
+  //         },
+  //       ];
 
-        setProperties(sampleProperties);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+  //       setProperties(sampleProperties);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
 
-    fetchProperties();
-  }, []);
+  //   fetchProperties();
+  // }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -159,8 +159,8 @@ const Seller = () => {
         <button type="submit">{isEditing ? "Update Property" : "Post Property"}</button>
       </form>
 
-      <h2 className="heading">Posted Properties</h2>
-      <div className="properties-list">
+      {/* <h2 className="heading">Posted Properties</h2> */}
+      {/* <div className="properties-list">
         {properties.length === 0 ? (
           <p>No properties added yet.</p>
         ) : (
@@ -178,7 +178,7 @@ const Seller = () => {
             </div>
           ))
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -3,7 +3,8 @@ import './Navbar.css'
 export default function Navbar(){
     return(
       <div className="nav-container">
-        <div className="logo-title"><img className="logo" src="/logo.png"></img>
+        <div className="logo-title">
+          <img className="logo" src="/logo.png" alt="logo"></img>
         <h1 >Rentify</h1></div>
         <ul><li>Home</li>
         <li>About</li>
