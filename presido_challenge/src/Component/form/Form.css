@@ -2,24 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@200;300&family=Montserrat:ital,wght@1,100&display=swap");
 
 img {
-  /* margin-left: 5rem; */
-  /* background-image: url(/public/background-image.jpeg); */
   width: 100%;
   height: auto;
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
 }
 .image {
   width: 40%;
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 #form {
   width: 70%;
 }
 
 .container {
-  padding-top: 7rem;
+  padding-top: 5.5rem;
   color: rgb(57, 57, 57);
   padding-bottom: 1rem;
   display: flex;
@@ -68,6 +63,7 @@ label {
   margin-left: 15%;
   margin-top: 0.5rem;
   width: 30rem;
+  font-size: 1rem;
   padding: 0.8rem 0.7rem;
   border: none;
   outline: none;
@@ -81,10 +77,8 @@ label {
   margin-right: 1rem;
   outline: none;
 }
-.radio-button:checked {
- border-bottom: 1px springgreen ;
-}
 .button-box {
+  margin-top: 0.8rem;
   margin-left: 12%;
   align-items: start;
 }
