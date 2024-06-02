@@ -72,34 +72,14 @@ const Seller = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isEditing) {
-      // Handle edit submission
-    } else {
-      // Handle create submission
-    }
-    setPropertyDetails({
-      area: "",
-      bedrooms: "",
-      bathrooms: "",
-      hospitalsNearby: "",
-      collegesNearby: "",
-      price: "",
-      address: "",
-    });
+    
   };
 
-  const handleDelete = (id) => {
-    // Handle delete logic
-  };
-
-  const handleEdit = (id) => {
-    // Handle edit logic
-  };
-
+ 
   return (
     <div className="seller-container">
-      <h1 className="heading">Post a New Property</h1>
-      <form onSubmit={handleSubmit} className="property-form">
+      <h2 className="heading">Post a New Property</h2>
+      <form onSubmit={handleSubmit} className="property-form" method="POST">
       <input
           type="text"
           name="area"
