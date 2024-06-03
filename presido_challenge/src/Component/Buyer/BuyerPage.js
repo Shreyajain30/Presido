@@ -72,6 +72,7 @@ const BuyerPage = () => {
     <div className="buyer-page">
       <h2>Available Properties</h2>
       <hr></hr>
+      <button className="filter-button">⮃ Filter</button>
       <div className="properties-list">
         {properties.map((property) => (
           <div key={property._id} className="property-card">
@@ -89,7 +90,7 @@ const BuyerPage = () => {
               <p><strong>Location:</strong> {property.location}</p>
               <p><strong>Size:</strong> {property.size} sq ft</p>
             </div>
-            <button>Rent</button>
+            <button className="rent-button">Rent</button>
           </div>
         ))}
       </div>
