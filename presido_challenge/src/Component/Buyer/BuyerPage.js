@@ -18,10 +18,10 @@ const BuyerPage = () => {
             description: "A beautiful and spacious 3 BHK apartment with all modern amenities.",
             location: "Mumbai, Maharashtra",
             rent: 75000,
-            size: 1500,
+            size: 2000,
             images: [
-              "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
-              "https://images.unsplash.com/photo-1570129477492-45c003edd2be"
+              "https://cms.interiorcompany.com/wp-content/uploads/2023/11/simple-house-design-go-for-minimalist.png",
+              "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVkJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
             ]
           },
           {
@@ -31,8 +31,9 @@ const BuyerPage = () => {
             location: "Bangalore, Karnataka",
             rent: 150000,
             size: 3000,
-            images: ["https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-              "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+            images: [
+              "https://houzone.com/wp-content/uploads/2021/01/3-bedroom-luxury-pool-house-design-house-plans-indiahousedesign-houzone-01.jpg",
+              "https://5.imimg.com/data5/SELLER/Default/2022/6/TO/ZO/FY/29206063/luxurious-bedroom-interior-design-500x500.jpg"
             ]
           },
           {
@@ -43,8 +44,8 @@ const BuyerPage = () => {
             rent: 50000,
             size: 1000,
             images: [
-              "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
-              "https://images.unsplash.com/photo-1570129477492-45c003edd2be"]
+             "https://cms.interiorcompany.com/wp-content/uploads/2023/11/simple-and-beautiful-house-design-the-loft-aesthetic.png",
+              "https://cms.interiorcompany.com/wp-content/uploads/2024/03/marry-neutrals-with-pastels-cozy-bedroom-decor.jpg"]
           }
         ];
 
@@ -69,24 +70,26 @@ const BuyerPage = () => {
 
   return (
     <div className="buyer-page">
-      <h1>Available Properties</h1>
+      <h2>Available Properties</h2>
+      <hr></hr>
       <div className="properties-list">
         {properties.map((property) => (
           <div key={property._id} className="property-card">
-            <div className="property-card-header">
-              <h2>{property.title}</h2>
-              <p className="property-rent">${property.rent.toLocaleString()}</p>
-            </div>
             <div className="property-images">
               {property.images.map((image, index) => (
-                <img key={index} src={image} alt={`Property ${property._id} Image ${index + 1}`} />
+                <img key={index} src={image} alt={"Property" }  />
               ))}
+            </div>
+            <div className="property-card-header">
+              <h3>{property.title}</h3>
+              <p className="property-rent">Rs.{property.rent.toLocaleString()}</p>
             </div>
             <div className="property-details">
               <p>{property.description}</p>
               <p><strong>Location:</strong> {property.location}</p>
               <p><strong>Size:</strong> {property.size} sq ft</p>
             </div>
+            <button>Rent</button>
           </div>
         ))}
       </div>

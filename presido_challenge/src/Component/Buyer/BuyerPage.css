@@ -1,7 +1,14 @@
-/* src/components/BuyerPage.css */
+
 .buyer-page {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 6rem;
+
+}
+.buyer-page h2{
+  text-align: center;
+ 
+}
+.buyer-page hr{
+  margin:1.5rem 0;
 }
 
 .properties-list {
@@ -17,11 +24,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 300px;
+  width: 25rem;
+  height:40rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .property-card:hover {
-  transform: translateY(-5px);
+
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -29,28 +39,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height:15%;
   background-color: #f8f9fa;
   padding: 10px 15px;
   border-bottom: 1px solid #ddd;
 }
 
-.property-card-header h2 {
-  margin: 0;
+.property-card-header h3 {
+  margin-right: 1rem;
   font-size: 1.2em;
   color: #333;
 }
 
 .property-rent {
   font-size: 1.1em;
-  color: #28a745;
+  font-weight: bold;
+  color: rgb(73, 125, 69);
 }
-
+.property-images{
+  height:50%;
+overflow:scroll;
+}
 .property-images img {
   width: 100%;
   height: auto;
 }
 
 .property-details {
+  height:30%;
   padding: 15px;
 }
 
@@ -65,4 +81,19 @@
 
 .property-card img {
   border-bottom: 1px solid #ddd;
+}
+.buyer-page button{
+  background: linear-gradient(rgb(70, 120, 75), rgb(36, 76, 49));
+    color: white;
+    transition: box-shadow ease 0.2s ;
+    border:none;
+    border-radius: 0.9rem;
+    width:30%;
+    padding:1em;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+.buyer-page button:hover{
+  box-shadow: 1px 1px 4px 0px rgb(124, 124, 124);
+  background: linear-gradient(rgb(126, 124, 121), rgb(84, 84, 84));
 }
