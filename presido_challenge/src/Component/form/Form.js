@@ -2,7 +2,11 @@ import { useState } from "react";
 import React from "react";
 import "./Form.css";
 function Form({ onFormSubmit }) {
-  const [inputValue, setInputValue] = useState({ email: "", password: "" });
+  const [inputValue, setInputValue] = useState({ firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    password: "", });
   const [user, setUser] = useState({ buyer: false, seller: false });
 
   const [logIn, setLogIn] = useState({
@@ -74,11 +78,8 @@ function Form({ onFormSubmit }) {
                 value={inputValue.phone}
                 onChange={(e) =>
                   setInputValue({
-                    firstName: inputValue.firstName,
-                    lastName: inputValue.lastName,
+                    ...inputValue,
                     phone: e.target.value,
-                    email: inputValue.email,
-                    password: inputValue.password,
                   })
                 }
                 required
@@ -95,11 +96,8 @@ function Form({ onFormSubmit }) {
                 value={inputValue.email}
                 onChange={(e) =>
                   setInputValue({
-                    firstName: inputValue.firstName,
-                    lastName: inputValue.lastName,
-                    phone: inputValue.phone,
+                    ...inputValue,
                     email: e.target.value,
-                    password: inputValue.password,
                   })
                 }
                 required
@@ -115,10 +113,7 @@ function Form({ onFormSubmit }) {
                 value={inputValue.password}
                 onChange={(e) =>
                   setInputValue({
-                    firstName: inputValue.firstName,
-                    lastName: inputValue.lastName,
-                    phone: inputValue.phone,
-                    email: inputValue.email,
+                    ...inputValue,
                     password: e.target.value,
                   })
                 }

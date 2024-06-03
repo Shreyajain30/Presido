@@ -13,6 +13,7 @@ const Seller = () => {
     address: "",
   });
   const [isEditing, setIsEditing] = useState(false);
+<<<<<<< HEAD
   const[editId,setEditId]=useState(null);
   useEffect(() => {
     const fetchProperties = async () => {
@@ -50,6 +51,8 @@ const Seller = () => {
             address: "789, PQR Street, City",
           },
         ];
+=======
+>>>>>>> main
 
         setProperties(sampleProperties);
       } catch (err) {
@@ -91,6 +94,7 @@ const Seller = () => {
       setIsEditing(false);
       window.scrollTo({top:600,behavior:"smooth"});
     }
+<<<<<<< HEAD
     else{
       const newProperty=propertyDetails;
       setProperties([...properties,newProperty]);
@@ -107,6 +111,20 @@ const Seller = () => {
       }
     )
   };
+=======
+    setPropertyDetails({
+      area: "",
+      bedrooms: "",
+      bathrooms: "",
+      hospitalsNearby: "",
+      collegesNearby: "",
+      price: "",
+      address: "",
+    });
+  };
+
+ 
+>>>>>>> main
 
   return (
     <div className="seller-container">
