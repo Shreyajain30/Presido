@@ -1,15 +1,15 @@
 // src/components/BuyerPage.js
 import React, { useEffect, useState } from "react";
 import "./BuyerPage.css";
+import Sorting from "./Sorting"
 
-const BuyerPage = () => {
+
+export default function BuyerPage  ()  {
   const [properties, setProperties] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const[dropdownOpen,setDropdownOpen]=useState(false);
 
   useEffect(() => {
-    const fetchProperties = async () => {
-      try {
+    
         // Simulate fetching data with hardcoded properties
         const sampleProperties = [
           {
@@ -40,39 +40,33 @@ const BuyerPage = () => {
             _id: 3,
             title: "Cozy 2 BHK Apartment",
             description: "A cozy 2 BHK apartment located in the heart of the city.",
-            location: "Delhi, Delhi",
+            location: "Vasant Kunj, Delhi",
             rent: 50000,
             size: 1000,
             images: [
              "https://cms.interiorcompany.com/wp-content/uploads/2023/11/simple-and-beautiful-house-design-the-loft-aesthetic.png",
               "https://cms.interiorcompany.com/wp-content/uploads/2024/03/marry-neutrals-with-pastels-cozy-bedroom-decor.jpg"]
           }
-        ];
+        ]
 
         setProperties(sampleProperties);
-        setLoading(false);
-      } catch (err) {
-        setError(err);
-        setLoading(false);
-      }
-    };
-
-    fetchProperties();
+     
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
+  function toggleDropdown(){
+    setDropdownOpen(!dropdownOpen);
   }
 
   return (
     <div className="buyer-page">
       <h2>Available Properties</h2>
       <hr></hr>
-      <button className="filter-button">⮃ Filter</button>
+      <div className="dropdown">
+      <button className="filter-button" onClick={toggleDropdown} >⮃ Filter</button>
+     {dropdownOpen && 
+     <Sorting properties={properties} setProperties={setProperties}/> 
+    }</div>
       <div className="properties-list">
         {properties.map((property) => (
           <div key={property._id} className="property-card">
@@ -98,4 +92,4 @@ const BuyerPage = () => {
   );
 };
 
-export default BuyerPage;
+

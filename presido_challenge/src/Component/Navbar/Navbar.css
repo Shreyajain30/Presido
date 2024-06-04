@@ -10,14 +10,14 @@
    position: fixed;
    z-index: 1;
 }
-ul{
+.nav-container ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-li{
+.nav-container li{
     padding: 1rem;
 }
 .logo-title{
