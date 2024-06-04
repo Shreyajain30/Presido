@@ -48,7 +48,7 @@ img {
 .firstName {
   margin-top: 1rem;
 }
-hr {
+.container hr {
   margin: 0 5rem;
   border: 1px solid rgb(170, 162, 162);
 }
@@ -105,4 +105,63 @@ label {
   font-size: 1.05rem;
   margin-top: 0.4rem;
   padding-bottom: 0.3rem;
+}
+
+@media (max-width: 768px){
+  .container{
+    padding-top:2rem;
+    flex-direction: column;
+    font-size: smaller;
+  }
+  .box-container{
+  width:100%;
+  }
+  .box{
+    padding:0;
+  }
+  .line-input{
+    width:80%;
+  }
+  .container hr{
+    margin :0;
+  }
+  .title{
+    margin-top: 2rem;
+  }
+  .image{
+    margin:0;
+    width:50%;
+    text-align: center;
+  }
+  .user{
+    font-size: 0.7rem;
+
+  }
+}
+@media (max-width:480px){
+  .container{
+    font-size: smaller;
+  }
+  .image{
+    width:60%;
+  }
+  .image h1{
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+  }
+.title{
+  font-size: 0.7rem;
+}
+.user{
+  font-size: 0.7rem;
+  align-self: center;
+}
+.button_container{
+  align-self: center;
+}
+.box label{
+font-size: 1rem;
+}
+#submit{
+font-size: 0.7rem;}
 }

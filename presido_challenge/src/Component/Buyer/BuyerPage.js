@@ -29,8 +29,8 @@ export default function BuyerPage  ()  {
             title: "Luxury Villa with Pool",
             description: "A luxurious villa with a private pool and garden.",
             location: "Bangalore, Karnataka",
-            rent: 150000,
-            size: 3000,
+            rent: 65000,
+            size: 2200,
             images: [
               "https://houzone.com/wp-content/uploads/2021/01/3-bedroom-luxury-pool-house-design-house-plans-indiahousedesign-houzone-01.jpg",
               "https://5.imimg.com/data5/SELLER/Default/2022/6/TO/ZO/FY/29206063/luxurious-bedroom-interior-design-500x500.jpg"

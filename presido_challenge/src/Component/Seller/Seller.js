@@ -191,6 +191,7 @@ const Seller = () => {
           ) : (
             properties.map((property) => (
               <div key={property.id} className="property-item-seller">
+                <div className="detail-container">
                 <p>
                   <strong>Area:</strong> {property.area}
                 </p>
@@ -212,6 +213,7 @@ const Seller = () => {
                 <p>
                   <strong>Address:</strong> {property.address}
                 </p>
+                </div>
                 <div className="button-container">
                   <button onClick={() => handleEdit(property.id)}>Edit</button>
                   <button onClick={() => handleDelete(property.id)}>

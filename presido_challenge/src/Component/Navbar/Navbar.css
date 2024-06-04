@@ -5,7 +5,7 @@
     height:5rem;
     width:100vw;
     justify-content: space-between;
-    padding:0 2rem;
+    padding-right: 2rem;
    align-items: center;
    position: fixed;
    z-index: 1;
@@ -21,13 +21,49 @@
     padding: 1rem;
 }
 .logo-title{
+    width:15rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: flex-start;
     overflow: hidden;
 }
 .logo{
 width:60px;
 height:auto;
-margin-right:1rem;
+/* margin-right:1rem; */
 }
+@media (max-width: 768px) {
+    .nav-container {
+      height: 4rem;
+      padding: 1rem;
+      position: relative;
+    }
+    
+    .nav-container ul {
+      display: none;
+    }
+    .logo-title{
+       font-size: 1rem;
+        position: absolute;
+        left:35%;
+    }
+    .logo{
+        width:50px;
+    }
+    
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 480px) {
+  
+      .logo-title{
+         font-size: 0.8rem;
+         width:50%;
+          left:25%;
+      }
+    
+    .logo {
+      width: 40px;
+    }
+  }
