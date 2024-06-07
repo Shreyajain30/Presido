@@ -8,7 +8,7 @@ export default function BuyerPage  ()  {
   const [properties, setProperties] = useState([]);
   const[dropdownOpen,setDropdownOpen]=useState(false);
 
-  useEffect(() => {
+
     
         // Simulate fetching data with hardcoded properties
         const sampleProperties = [
@@ -48,10 +48,10 @@ export default function BuyerPage  ()  {
               "https://cms.interiorcompany.com/wp-content/uploads/2024/03/marry-neutrals-with-pastels-cozy-bedroom-decor.jpg"]
           }
         ]
-
-        setProperties(sampleProperties);
+        useEffect(()=>{
+        setProperties(sampleProperties);},[])
      
-  }, []);
+ 
 
 
   function toggleDropdown(){
@@ -60,12 +60,12 @@ export default function BuyerPage  ()  {
 
   return (
     <div className="buyer-page">
-      <h2>Available Properties</h2>
+      <h2 className="main-heading">Available Properties</h2>
       <hr></hr>
       <div className="dropdown">
       <button className="filter-button" onClick={toggleDropdown} >⮃ Filter</button>
      {dropdownOpen && 
-     <Sorting properties={properties} setProperties={setProperties}/> 
+     <Sorting properties={sampleProperties} setProperties={setProperties} toggleDropdown={toggleDropdown}/> 
     }</div>
       <div className="properties-list">
         {properties.map((property) => (

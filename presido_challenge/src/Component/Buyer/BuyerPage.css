@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+
 .buyer-page hr {
   margin: 1.5rem 0;
 }
@@ -104,9 +105,25 @@
   margin-bottom: 1rem;
   position: relative;
 }
+.locSection{
+  display: flex;
+  justify-content: center;
+}
+.locInput{
+width:80%;
+height:10%;
+outline:none;
+border: none;
+box-shadow: 1px 1px ;
+}
+.locSection button{
+  height:10%;
+  padding:0;
+}
 .filter-button {
   border-radius: 1rem;
   width:70%;
+  position: relative;
   align-self: flex-end;
   font-size: 0.9rem;
   background: linear-gradient(rgb(114, 114, 114), rgb(45, 45, 45));
@@ -125,14 +142,14 @@
   left:30%;
   box-shadow: 1px 1px 4px 0px #555;
 }
-.dropdown-menu p{
+.dropdown-menu div{
   margin:0;
 background-color: #cdcdcd;
 color:#212121;
 font-size: 1.1rem;
 padding:0.2rem;
 }
-.dropdown-menu p:hover{
+.dropdown-menu div:hover{
   background-color: #959595;
   color:white;
   cursor:pointer;
@@ -176,7 +193,7 @@ padding:0.2rem;
     width:100%;
     left:0;
   }
-  .dropdown-menu p{
+  .dropdown-menu div{
     font-size: 0.8rem;
   }
 
