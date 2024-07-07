@@ -16,7 +16,6 @@ const writeProperties = (properties) =>
 
 // Middleware to check if user is authenticated
 const authenticateUser = (req, res, next) => {
-  console.log("in authenticateUser")
   const token = req.headers["authorization"];
   if (!token) {
     return res.status(401).json({ message: "Unauthorized" });
@@ -35,8 +34,6 @@ const authenticateUser = (req, res, next) => {
 // Middleware to check if user is a seller
 const authenticateSeller = (req, res, next) => {
   authenticateUser(req, res, () => {
-  console.log("in authenticateSeller")
-
     if (req.user.role !== "seller") {
       return res.status(403).json({ message: "Forbidden" });
     }
@@ -77,7 +74,6 @@ router.get("/", (req, res) => {
 
 // Update property
 router.put("/:id", authenticateSeller, (req, res) => {
-  console.log("came in update");
   const properties = readProperties();
   const propertyIndex = properties.findIndex(
     (p) => p.id === parseInt(req.params.id)
