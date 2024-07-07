@@ -1,187 +1,228 @@
-
 .seller-container {
-    padding-top:6rem;
-    text-align: center;
-    overflow: scroll;
-  }
-  .form-container{
-    display: flex;
-    flex-direction: row;
-  }
-  .form-container img{
-    width:18vw;
-    height:auto;
-  }
-  .first-image{
-    padding-left: 1vw;
-    padding-top: 2vh;
-  }
-  .last-image{
-    padding-right:2rem;
-    align-self: end;
-  }
-  .heading{
-    margin: 0.8rem 0;
-    color: rgb(57, 57, 57);
-  }
-  .property-form {
-    width:70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .property-form hr{
+  padding-top: 6rem;
+  text-align: center;
+  overflow: scroll;
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+}
+.form-container img {
+  width: 18vw;
+  height: auto;
+}
+.first-image {
+  padding-left: 1vw;
+  padding-top: 2vh;
+}
+.last-image {
+  padding-right: 2rem;
+  padding-bottom: 4.5rem;
+  align-self: end;
+}
+.heading {
+  margin: 0.8rem 0;
+  color: rgb(57, 57, 57);
+}
+.property-form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.property-form hr {
   width: 90%;
-  }
-  .property-form input {
-    padding: 10px;
-    font-size: 1em;
-    width:50%;
-    text-align: wrap;
-    border:none;
-    outline:none;
-    border-bottom: 0.8px solid rgb(156, 156, 156);
-    transition: border-bottom 0.2s ease;
-  }
-  input:focus{
-    border-bottom: 2px solid rgb(73, 125, 69);
-  }
-  .property-form button {
-    margin-top:1rem;
-    margin-bottom:5rem;
-    width: 30%;
-    padding: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:none ;
-    border-radius: 1rem;
-    background: linear-gradient(rgb(70, 120, 75), rgb(36, 76, 49));
-    color: white;
-    box-shadow: 1px 1px 4px 0.5px rgb(44, 44, 44);
-    font-size: 1.2rem;
-    text-align: wrap;
+}
+.property-form input {
+  padding: 10px;
+  font-size: 1em;
+  width: 50%;
+  text-align: wrap;
+  border: none;
+  outline: none;
+  border-bottom: 0.8px solid rgb(156, 156, 156);
+  transition: border-bottom 0.2s ease;
+}
+input:focus {
+  border-bottom: 2px solid rgb(73, 125, 69);
+}
+.property-form label {
+  margin: 0;
+  align-self: center;
+  font-weight: 300;
+}
+.property-form button {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  width: 30%;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(rgb(70, 120, 75), rgb(36, 76, 49));
+  color: white;
+  box-shadow: 1px 1px 4px 0.5px rgb(44, 44, 44);
+  font-size: 1.2rem;
+  text-align: wrap;
 }
 
 .property-form button:hover {
   background: linear-gradient(rgb(91, 145, 100), rgb(34, 72, 44));
 }
-
-.property-container-seller hr{
-  width:20%;
+.property-container-seller hr {
+  width: 20%;
 }
-  .properties-list-seller {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  
+.properties-list-seller {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+.no-property {
+  padding: 5rem;
+  margin-bottom: 10rem;
+  font-size: larger;
+  font-weight: 500;
+  color: rgb(57, 57, 57);
+}
+.property-item-seller {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 27%;
+  height: 40rem;
+  margin-bottom: 1rem;
+  transition: transform ease 0.2s, box-shadow ease 0.2s;
+}
+.property-item-seller:hover {
+  box-shadow: 0 4px 8px rgb(58, 58, 58, 0.1);
+  transform: translateY(1px);
+}
+.seller-container .property-images {
+  height: 45%;
+  overflow: scroll;
+}
+.property-images {
+  display: flex;
+  flex-direction: column;
+}
+.property-images img {
+  width: 100%;
+  height: auto;
+}
+.no-images {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.detail-container {
+  height: 40%;
+  overflow: scroll;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+.property-item-seller p {
+  margin: 5px 0;
+  text-align: start;
+}
+.button-container {
+  height: 15%;
+  align-self: center;
+}
+.property-item-seller button {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0.8rem 1.3rem;
+  border: none;
+  border-radius: 1.4rem;
+  cursor: pointer;
+}
+
+.property-item-seller button:first-of-type {
+  background: linear-gradient(rgb(70, 120, 75), rgb(36, 76, 49));
+  color: white;
+  transition: box-shadow ease 0.2s;
+}
+
+.property-item-seller button:last-of-type {
+  background: linear-gradient(rgb(210, 40, 40), rgb(144, 19, 19));
+  color: white;
+  transition: box-shadow ease 0.3s;
+}
+.property-item-seller button:hover {
+  box-shadow: 1px 1px 4px 0px rgb(124, 124, 124);
+  background: linear-gradient(rgb(126, 124, 121), rgb(84, 84, 84));
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 1125px) {
+  .property-item-seller {
+    width: 45%;
   }
-  .no-property{
-    padding:5rem;
-    margin-bottom:10rem;
-    font-size:larger;
-    font-weight: 500;
-    color: rgb(57, 57, 57);
+}
+@media (max-width: 768px) {
+  .seller-container {
+    padding-top: 4.2rem;
+    font-size: smaller;
+  }
+  .properties-list-seller {
+    gap: 1.3rem;
+  }
+  .seller-container button {
+    font-size: 0.6rem;
+  }
+  .property-form input {
+    font-size: 0.9rem;
+    width: 60%;
+  }
+  .detail-container p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .seller-container {
+    padding-top: 3rem;
+  }
+  .form-container img {
+    display: none;
   }
   .property-item-seller {
-    margin:1rem 2rem;
-    padding: 4%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items:start;
-    width:40%;
-    transition: transform ease 0.2s,box-shadow ease 0.2s;
+    width: 70%;
+    height: 30rem;
   }
-  .property-item-seller:hover{
-    box-shadow: 0 4px 8px rgb(58, 58, 58,0.1);
-    transform:translateY(1px);
- 
+  .form-container {
+    display: block;
   }
-  .detail-container{
-    height:85%;
+  .property-form {
+    width: 100%;
+    margin-bottom: 0.3rem;
   }
-  .property-item-seller p {
-    margin: 5px 0;
-    text-align: start;
+  .property-form button {
+    margin-bottom: 1rem;
   }
-  .button-container{
-    align-self: center; 
+  .detail-container p {
+    font-size: 0.8rem;
   }
-  .property-item-seller button {
-    margin-top: 1rem;
-    margin-right: 1rem;
-    padding: 0.8rem 1.3rem;
-    border: none;
-    border-radius: 1.4rem;
-    cursor: pointer;
+  .heading {
+    font-size: 1.3rem;
   }
-
-  .property-item-seller button:first-of-type {
-    background: linear-gradient(rgb(70, 120, 75), rgb(36, 76, 49));
-    color: white;
-    transition: box-shadow ease 0.2s ;
+  .button-container button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
- 
-  .property-item-seller button:last-of-type {
-    background:linear-gradient(rgb(210, 40, 40),rgb(144, 19, 19));
-    color: white;
-    transition: box-shadow ease 0.3s ;
-  }
-  .property-item-seller button:hover{
-    box-shadow: 1px 1px 4px 0px rgb(124, 124, 124);
-    background: linear-gradient(rgb(126, 124, 121), rgb(84, 84, 84));
-  }
- 
-  @media (max-width:768px){
-    .seller-container{
-      padding-top:1rem;
-      font-size: smaller;
-    }
-    .seller-container button{
-      font-size: 0.6rem;
-    }
-    .property-form input{
-      font-size: 0.9rem;
-    }
-   .detail-container p{
-    font-size: 1rem;
-   }
-   .property-item-seller{
-    margin:1rem 0.2rem;
-    padding: 0.2rem;
-   }
-  }
-  @media(max-width:480px){
-.seller-container{
-  padding-top: 0.6rem;
 }
-.seller-container img{
-  display:none;
-}
-.form-container{
- display: block;
-}
-.property-form{
-  width: 100%;
-  margin-bottom: 0.3rem;
-}
-.property-form button{
-  margin-bottom: 1rem;
-}
-.detail-container p{
-  font-size: 0.7rem;
-}
-.heading{
-  font-size: 1.3rem;
-}
-.button-container button{
-  padding:0.5rem;
-  font-size: 0.6rem;
-}
-  }

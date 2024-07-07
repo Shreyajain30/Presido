@@ -9,7 +9,6 @@
   text-align: center;
 }
 
-
 .buyer-page hr {
   margin: 1.5rem 0;
 }
@@ -19,7 +18,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap:20px;
   width: 100%;
 }
 
@@ -29,10 +27,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 22rem;
+  width: 27%;
   height: 40rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 5%;
 }
 
 .property-card:hover {
@@ -48,18 +47,22 @@
   background-color: #f8f9fa;
   padding: 10px 15px;
   border-bottom: 1px solid #ddd;
+  overflow: scroll;
 }
 
 .property-card-header h3 {
-  margin-right: 1rem;
+  align-items: flex-start;
+  margin-right: 1%;
   font-size: 1.2em;
   color: #333;
 }
 
 .property-rent {
+  align-items: flex-end;
   font-size: 1.1em;
   font-weight: bold;
   color: rgb(73, 125, 69);
+  margin-left: 1%;
 }
 .property-images {
   height: 50%;
@@ -72,7 +75,8 @@
 
 .property-details {
   height: 30%;
-  padding: 15px;
+  padding: 0 15px;
+  overflow: scroll;
 }
 
 .property-details p {
@@ -96,33 +100,35 @@
   cursor: pointer;
 }
 
-.dropdown{
+.dropdown {
   align-self: flex-end;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-right: 1.4rem;
-  width:15%;
+  width: 15%;
   margin-bottom: 1rem;
   position: relative;
 }
-.locSection{
+.locSection {
+  margin:0;
   display: flex;
   justify-content: center;
 }
-.locInput{
-width:80%;
-height:10%;
-outline:none;
-border: none;
-box-shadow: 1px 1px ;
+.locInput {
+  margin: 0;
+  width: 100%;
+  height: 10%;
+  outline: none;
+  border: none;
+  box-shadow: 1px 1px;
 }
-.locSection button{
-  height:10%;
-  padding:0;
+.locSection button {
+  height: 10%;
+  padding: 0;
 }
 .filter-button {
   border-radius: 1rem;
-  width:70%;
+  width: 70%;
   position: relative;
   align-self: flex-end;
   font-size: 0.9rem;
@@ -134,25 +140,25 @@ box-shadow: 1px 1px ;
   box-shadow: 1px 1px 4px 0px #555;
 }
 
-.dropdown-menu{
-  z-index: 1;
+.dropdown-menu {
+  z-index: 0;
   position: absolute;
-  width:70%;
-  top:115%;
-  left:30%;
+  width: 70%;
+  top: 115%;
+  left: 30%;
   box-shadow: 1px 1px 4px 0px #555;
 }
-.dropdown-menu div{
-  margin:0;
-background-color: #cdcdcd;
-color:#212121;
-font-size: 1.1rem;
-padding:0.2rem;
+.dropdown-menu div {
+  margin: 0;
+  background-color: #cdcdcd;
+  color: #212121;
+  font-size: 1.1rem;
+  padding: 0.2rem;
 }
-.dropdown-menu div:hover{
+.dropdown-menu div:hover {
   background-color: #959595;
-  color:white;
-  cursor:pointer;
+  color: white;
+  cursor: pointer;
 }
 .rent-button {
   border-radius: 0.9rem;
@@ -166,69 +172,71 @@ padding:0.2rem;
   box-shadow: 1px 1px 4px 0px rgb(124, 124, 124);
   background: linear-gradient(rgb(126, 124, 121), rgb(84, 84, 84));
 }
-
-@media (max-width:768px){
-  .buyer-page{
-    padding:2rem;
+@media (max-width: 1125px) {
+  .property-card {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .buyer-page {
     font-size: smaller;
   }
-  .filter-button{
+  .filter-button {
     width: 100%;
-    border-radius:1rem ;
+    border-radius: 1rem;
     font-size: 0.8rem;
   }
-  .property-card{
-    width:15rem;
+
+  .buyer-page hr {
+    margin: 0.3rem;
   }
-  .buyer-page hr{
-    margin:0.3rem;
+  .property-card-header h3 {
+    font-size: 1rem;
   }
-  .property-card-header h3{
-    font-size: 1.2rem;
-  }
-  .property-rent{
+  .property-rent {
     font-size: 1.1rem;
   }
-  .dropdown-menu{
-    width:100%;
-    left:0;
+  .dropdown-menu {
+    width: 100%;
+    left: 0;
   }
-  .dropdown-menu div{
+  .dropdown-menu div {
     font-size: 0.8rem;
   }
-
 }
-@media (max-width:480px){
-  .buyer-page{
-    padding:1rem;
+@media (max-width: 540px) {
+  .buyer-page {
     font-size: smaller;
   }
-  .buyer-page h2{
+  .buyer-page h2 {
     font-size: 1.5rem;
   }
-  .properties-list{
-    gap:5px;
+  .properties-list {
+    gap: 5px;
   }
-  .property-card-header h3{
+  .property-card {
+    width: 70%;
+  }
+  .property-card-header h3 {
     font-size: 1rem;
   }
-  .buyer-page hr{
-    margin:0.3rem;
+  .buyer-page hr {
+    margin: 0.3rem;
   }
-  .property-rent{
+  .property-rent {
     font-size: 1rem;
   }
-  .property-details{
-    font-size: 0.8rem;
+  .property-details {
+    font-size: 0.9rem;
   }
-  .dropdown{
-    width:30%;
+  .dropdown {
+    width: 30%;
   }
-.filter-button{
-  border-radius: 0.8rem;
-  font-size: 0.7rem;
-}
-  .rent-button{
-    font-size: 0.5rem;
+  .filter-button {
+    border-radius: 1rem;
+    font-size: 0.7rem;
+  }
+  .rent-button {
+    font-size: 0.7rem;
   }
 }

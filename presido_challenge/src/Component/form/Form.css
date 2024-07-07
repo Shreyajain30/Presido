@@ -28,7 +28,8 @@ img {
   flex-direction: column;
 }
 
-.container h1,p {
+.container h1,
+p {
   margin-left: 1rem;
 }
 .box {
@@ -86,6 +87,7 @@ label {
   width: 40%;
   height: 2.5rem;
   margin-top: 1rem;
+  overflow: scroll;
   color: white;
   cursor: pointer;
   text-align: center;
@@ -98,7 +100,14 @@ label {
 .button_container:hover {
   background: linear-gradient(rgb(91, 145, 100), rgb(34, 72, 44));
 }
-
+#success {
+  color: rgb(242, 29, 25);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 16%;
+  margin-top: 2%;
+  align-self: flex-start;
+}
 .user {
   align-items: start;
   margin-left: 12%;
@@ -107,61 +116,61 @@ label {
   padding-bottom: 0.3rem;
 }
 
-@media (max-width: 768px){
-  .container{
-    padding-top:2rem;
+@media (max-width: 768px) {
+  .container {
+    padding-top: 5rem;
     flex-direction: column;
     font-size: smaller;
   }
-  .box-container{
-  width:100%;
+  .box-container {
+    width: 100%;
   }
-  .box{
-    padding:0;
+  .box {
+    padding: 0;
   }
-  .line-input{
-    width:80%;
+  .line-input {
+    width: 80%;
   }
-  .container hr{
-    margin :0;
+  .container hr {
+    margin: 0;
   }
-  .title{
+  .title {
     margin-top: 2rem;
   }
-  .image{
-    margin:0;
-    width:50%;
+  .image {
+    margin: 0;
+    width: 50%;
     text-align: center;
   }
-  .user{
+  .user {
     font-size: 0.7rem;
-
+  }
+  #success {
+    font-size: 1rem;
   }
 }
-@media (max-width:480px){
-  .container{
+@media (max-width: 480px) {
+  .container {
     font-size: smaller;
   }
-  .image{
-    width:60%;
+  .image {
+    width: 60%;
   }
-  .image h1{
+  .image h1 {
     font-size: 1.7rem;
     margin-bottom: 0.3rem;
   }
-.title{
-  font-size: 0.7rem;
-}
-.user{
-  font-size: 0.7rem;
-  align-self: center;
-}
-.button_container{
-  align-self: center;
-}
-.box label{
-font-size: 1rem;
-}
-#submit{
-font-size: 0.7rem;}
+  .title {
+    font-size: 0.7rem;
+  }
+  .user {
+    font-size: 0.7rem;
+  }
+
+  .box label {
+    font-size: 1rem;
+  }
+  #submit {
+    font-size: 0.7rem;
+  }
 }
